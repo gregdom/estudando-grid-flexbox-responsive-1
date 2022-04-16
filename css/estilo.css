@@ -1,0 +1,733 @@
+/* RESET */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Open Sans', sans-serif;
+    background-color: #18191A;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    color: #e4e6eb;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto;
+    gap: 30px;
+    grid-template-areas:
+        "header"
+        "wrapper"
+    ;
+}
+
+
+
+
+/* HEADER */
+header {
+    position: sticky;
+    top: 0;
+    grid-area: header;
+    width: 100%;
+    margin: 0 auto;
+
+    border-bottom: 1px solid #38393a;
+    background-color: #242526;
+}
+
+/* 
+Config estilo geral do Header,
+Config + status: none do ícone mobile no desktop.
+*/
+header a {
+    color: #aab0b8;
+}
+
+header .wrapper-header .icone-menu {
+    width: 225px;
+    height: 60px;
+    display: none;
+}
+
+header .wrapper-header .icone-menu i {
+    font-size: 25px;
+    transition: 0.2s;
+    line-height: 60px;
+    color: #f0f3f7;
+}
+
+/* Header container */
+header .wrapper-header {
+    max-width: 1128px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Bloco da logo no desktop */
+header .wrapper-header .grid-logo {
+    width: 225px;
+    height: 60px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Bloco do menu principal > NAV */
+header .wrapper-header nav {
+    width: auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .wrapper-header nav a {
+    width: 80px;
+    margin: 0 10px;
+    padding: 3px 0;
+
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+header .wrapper-header nav a span {
+    font-size: 12px;
+}
+
+header .wrapper-header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.2s;
+}
+
+header .wrapper-header nav a:last-child {
+    display: none;
+}
+
+/* Bloco do menu de perfil */
+header .wrapper-header .grid-menu-perfil {
+    width: 315px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .wrapper-header .grid-menu-perfil a {
+    width: 42px;
+    height: 42px;
+    margin: 0 5px;
+
+    text-align: center;
+    line-height: 42px;
+    border-radius: 50%;
+    font-size: 15px;
+    transition: 0.2s;
+    color: #f0f3f7;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+header .wrapper-header .grid-menu-perfil a:last-child {
+    margin-right: 0;
+}
+
+header .wrapper-header .grid-menu-perfil a:hover {
+    transition: 0.2s;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+header .wrapper-header .grid-menu-perfil a:nth-child(2) {
+    position: relative;
+}
+
+/* Estilo: ícone de notificação */
+header .wrapper-header .grid-menu-perfil p {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: -10px;
+    margin-left: 30px;
+
+    font-size: 13px;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #e52d4c;
+}
+
+
+
+
+/*
+Container do conteúdo principal:
+div sidebar, tag main, tag aside.
+*/
+.wrapper-content {
+    grid-area: wrapper;
+    max-width: 1128px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 225px auto 315px;
+    grid-template-areas:
+        "sidebar-profile main aside"
+    ;
+    gap: 30px;
+}
+
+/* Bloco sidebar */
+.sidebar-profile {
+    height: auto;
+    grid-area: sidebar-profile;
+}
+
+.sidebar-profile>div {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #242526;
+}
+
+.sidebar-profile>div>img {
+    width: 75%;
+    margin: 0px auto 15px auto;
+    display: block;
+    border-radius: 50%;
+}
+
+.sidebar-profile>div>h1 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.sidebar-profile>div>h1 span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #b8bbbf;
+}
+
+.sidebar-profile p {
+    margin-bottom: 50px;
+    font-size: 14px;
+    color: #b8bbbf;
+}
+
+.sidebar-profile a {
+    width: 100%;
+    height: 40px;
+    display: block;
+
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    transition: 0.2s;
+    color: #fff;
+    background-color: #006bff;
+}
+
+.sidebar-profile a:hover {
+    transition: 0.2s;
+    background-color: #0052c5;
+}
+
+
+
+
+/* Bloco main */
+main {
+    grid-area: main;
+    height: auto;
+}
+
+main .l-post {
+    height: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #242526;
+}
+
+main .l-post .l-field {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    border-bottom: 1px solid #38393a;
+}
+
+main .l-post .l-field img {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+main .l-post .l-field input {
+    width: 100%;
+    padding: 0 16px;
+
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    outline: 0;
+    transition: 0.2s;
+    color: #eaeef1;
+    background-color: #474747;
+}
+
+main .l-post .l-field input:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: #5e5e5e;
+}
+
+main .l-post-buttons {
+    width: 100%;
+}
+
+main .l-post-buttons ul {
+    display: flex;
+    justify-content: center;
+}
+
+main .l-post-buttons a {
+    width: 100px;
+    height: 40px;
+    display: block;
+
+    line-height: 40px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.2s;
+    color: #b8bbbf;
+}
+
+main .l-post-buttons a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+main .l-post-buttons .fa-images {
+    color: #70b5f9;
+}
+
+main .l-post-buttons .fa-clapperboard {
+    color: #e8cf43;
+}
+
+main .l-post-buttons .fa-video {
+    color: #f97070;
+}
+
+main .l-post-buttons .fa-calendar-check {
+    color: #70f9b9;
+}
+
+
+main .l-feed {
+    height: auto;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #242526;
+}
+
+main .l-feed .feed-perfil {
+    display: flex;
+}
+
+main .l-feed .feed-perfil img {
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+main .l-feed .feed-perfil .feed-bio {
+    width: 100%;
+}
+
+main .l-feed .feed-perfil .feed-bio h3 {
+    margin: 0 0 3px 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+main .l-feed .feed-perfil .feed-bio p {
+    margin: 0;
+    font-size: 12px;
+    color: #b0b3b8;
+}
+
+main .l-feed .feed-perfil .feed-bio span {
+    margin-top: 3px;
+}
+
+
+main .l-feed .feed-post img {
+    width: 100%;
+}
+
+main .l-feed .feed-post p {
+    font-size: 14px;
+    color: #e4e6eb;
+}
+
+main .l-feed .feed-post p a {
+    font-weight: bold;
+    color: #e4e6eb;
+}
+
+
+
+
+/* Bloco aside */
+aside {
+    grid-area: aside;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* 
+Estilo geral de aside
+*/
+aside h2 {
+    font-size: 15px;
+}
+
+aside .aside-box {
+    height: auto;
+    margin-bottom: 15px;
+    padding: 10px;
+
+    border-radius: 8px;
+    background-color: #242526;
+}
+
+aside .aside-box span {
+    font-size: 12px;
+}
+
+/* Início > Estilo único para esse bloco */
+aside .advertisment h2 {
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+/* Fim > Estilo único para esse bloco */
+
+aside .advertisment div {
+    margin-bottom: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+
+    border-radius: 8px;
+    transition: 0.2s;
+    color: #b8bbbf;
+}
+
+aside .advertisment div:hover {
+    transition: 0.2s;
+    background-color: #303031;
+}
+
+aside .advertisment img {
+    width: 107px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+
+aside .news {
+    display: flex;
+    flex-direction: column;
+}
+
+aside .news a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #b8bbbf;
+}
+
+aside .news a:hover {
+    text-decoration: underline;
+}
+
+aside .news span {
+    font-size: 12px;
+    color: #b0b3b8;
+}
+
+
+
+
+/* Footer */
+footer p {
+    text-align: center;
+    font-size: 13px;
+    color: #b0b3b8;
+}
+
+footer p {
+    text-align: center;
+    font-size: 13px;
+    color: #b0b3b8;
+}
+
+footer p a {
+    color: #b0b3b8;
+}
+
+footer i {
+    color: #e52d4c;
+}
+
+
+
+
+/* VIEWPORT EM 1040PX */
+@media screen and (max-width: 1040px) {
+
+    .container {
+        gap: 20px;
+    }
+
+
+
+    /* Header */
+    header {
+        position: sticky;
+        top: 0;
+    }
+
+    header .wrapper-header {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header .wrapper-header .grid-logo {
+        width: auto;
+    }
+
+    header .wrapper-header nav a {
+        margin: 0;
+    }
+
+    header .wrapper-header .grid-menu-perfil {
+        width: auto;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    /* Bloco principal > conteúdo */
+    .wrapper-content {
+        max-width: 952px;
+        grid-template-columns: minmax(350px, 500px) auto;
+        grid-template-areas:
+            "main aside"
+        ;
+        gap: 20px;
+    }
+
+    .sidebar-profile {
+        display: none;
+    }
+
+    aside .advertisment img {
+        width: 30%;
+    }
+}
+
+
+
+
+/* VIEWPORT EM 768PX */
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    header {
+        position: sticky;
+        top: 0;
+    }
+
+    header .wrapper-header {
+        display: flex;
+        flex-grow: 0;
+        justify-content: space-between;
+    }
+
+    header .wrapper-header .icone-menu {
+        display: block;
+        width: auto;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+
+    header .wrapper-header .grid-logo {
+        margin: 0 0 0 40px;
+    }
+
+    header .wrapper-header nav {
+        position: fixed;
+        width: 250px;
+        height: 100%;
+        top: 60px;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+        display: none;
+
+        background-color: #242526;
+    }
+
+    header .wrapper-header nav br {
+        display: none;
+    }
+
+    header .wrapper-header nav a {
+        width: auto;
+        padding: 15px 10px;
+        display: block;
+        border-radius: 0;
+        text-align: left;
+        font-size: 16px;
+    }
+
+    header .wrapper-header nav a:last-child {
+        display: block;
+    }
+
+    header .wrapper-header nav a i {
+        width: 20px;
+    }
+
+    header .wrapper-header nav a span {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+
+    header .wrapper-header .grid-menu-perfil {
+        margin-right: 30px;
+    }
+
+    header .wrapper-header .grid-menu-perfil a {
+        width: 40px;
+        height: 40px;
+
+    }
+
+    header .wrapper-header .grid-menu-perfil p {
+        top: -7px;
+        line-height: 15px;
+    }
+
+
+
+    /* Bloco principal > conteúdo */
+    .wrapper-content {
+        max-width: 80%;
+        margin: 0 auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "main"
+        ;
+    }
+
+    main .l-post-buttons ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    main .l-post-buttons a {
+        width: 80px;
+        height: 40px;
+    }
+
+    aside {
+        display: none;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 480px) {
+
+    /* Header */
+    header {
+        position: sticky;
+        top: 0;
+    }
+
+    header .wrapper-header .grid-menu-perfil .icon-menu-profile {
+        display: none;
+    }
+
+    header .wrapper-header .icone-menu {
+        margin-left: 10px;
+    }
+
+    header .wrapper-header .grid-menu-perfil {
+        margin-right: 10px;
+    }
+
+
+
+    /* Bloco principal > conteúdo */
+    .wrapper-content {
+        max-width: 98%;
+        margin: 0 auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+            "main"
+        ;
+    }
+
+    main .l-post .l-field input {
+        overflow-wrap: break-word;
+    }
+
+    main .l-post-buttons ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
