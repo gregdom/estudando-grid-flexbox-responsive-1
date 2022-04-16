@@ -324,7 +324,7 @@ main .l-post-buttons ul {
 
 main .l-post-buttons a {
     width: 100px;
-    height: 40px;
+    height: 45px;
     display: block;
 
     line-height: 40px;
@@ -333,6 +333,10 @@ main .l-post-buttons a {
     border-radius: 8px;
     transition: 0.2s;
     color: #b8bbbf;
+}
+
+main .l-post-buttons a i{
+    display: block;
 }
 
 main .l-post-buttons a:hover {
@@ -729,5 +733,9 @@ footer i {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    main .l-post-buttons a {
+        margin-bottom: 20px;
     }
 }
